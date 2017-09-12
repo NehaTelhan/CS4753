@@ -28,14 +28,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             $(".dropdown dt a").click(function() {
                 $(".dropdown dd ul").toggle();
             });
-                        
+
             $(".dropdown dd ul li a").click(function() {
                 var text = $(this).html();
                 $(".dropdown dt a span").html(text);
                 $(".dropdown dd ul").hide();
                 $("#result").html("Selected value is: " + getSelectedValue("sample"));
             });
-                        
+
             function getSelectedValue(id) {
                 return $("#" + id).find("dt a span.value").html();
             }
@@ -67,14 +67,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    <ul class="nav" id="nav">
 						    	<li><a href="shop.html">Shop</a></li>
 						    	<li><a href="about.html">About Us</a></li>
-						    	<li><a href="experiance.html">Experience</a></li>
+						    	<li><a href="experiance.html">Our Collection</a></li>
 						    	<li><a href="contact.html">Contact</a></li>
 						    	<li><a href="login.html">Login</a></li>
-								<li><a href="register.html">Sign Up</a></li>								
+								<li><a href="register.html">Sign Up</a></li>
 								<div class="clear"></div>
 							</ul>
 							<script type="text/javascript" src="js/responsive-nav.js"></script>
-				    </div>							
+				    </div>
 	    		    <div class="clear"></div>
 	    	    </div>
 	            <div class="header_right">
@@ -125,7 +125,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- start slider -->
        <div id="fwslider">
          <div class="slider_container">
-            <div class="slide"> 
+            <div class="slide">
                 <!-- Slide image -->
                <img src="images/homepage/tea.jpg" class="img-responsive" alt=""/>
                 <!-- /Slide image -->
@@ -177,25 +177,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				visibleItems: 5,
 				animationSpeed: 1000,
 				autoPlay: true,
-				autoPlaySpeed: 3000,    		
+				autoPlaySpeed: 3000,
 				pauseOnHover: true,
 				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
+		    	responsiveBreakpoints: {
+		    		portrait: {
 		    			changePoint:480,
 		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
+		    		},
+		    		landscape: {
 		    			changePoint:640,
 		    			visibleItems: 2
 		    		},
-		    		tablet: { 
+		    		tablet: {
 		    			changePoint:768,
 		    			visibleItems: 3
 		    		}
 		    	}
 		    });
-		    
+
 		});
 		</script>
 		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
@@ -314,12 +314,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    			<input type="submit" value="Go">
 				    		   </form>
 					        </div>
-							<ul class="social">	
+							<ul class="social">
 							  <li class="facebook"><a href="#"><span> </span></a></li>
 							  <li class="twitter"><a href="#"><span> </span></a></li>
-							  <li class="instagram"><a href="#"><span> </span></a></li>	
-							  <li class="pinterest"><a href="#"><span> </span></a></li>	
-							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+							  <li class="instagram"><a href="#"><span> </span></a></li>
+							  <li class="pinterest"><a href="#"><span> </span></a></li>
+							  <li class="youtube"><a href="#"><span> </span></a></li>
 						    </ul>
 		   				</ul>
 					</div>
@@ -344,5 +344,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    				</div>
 			</div>
 		</div>
-</body>	
+</body>
 </html>
