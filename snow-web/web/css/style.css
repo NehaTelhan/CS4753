@@ -203,7 +203,7 @@ body a{
 }
 .sb-icon-search {
 	color: #FFF;
-background: #000 url('../images/img-sprite.png') no-repeat 0px 1px;
+background: #33935d url('../images/img-sprite.png') no-repeat 0px 1px;
 z-index: 90;
 }
 /* Open state */
