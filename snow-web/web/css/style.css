@@ -15,7 +15,7 @@ body a{
 	-o-transition: 0.5s all;
 }
 .header{
-	background:#000;
+	background:#C5482D; /*This is to change the color of the nav bar*/
 	padding: 1.5% 0;
 }
 .header-left{
@@ -770,7 +770,7 @@ p.m_5{
 }
 /*--footer--*/
 .footer{
-	background:#000;
+	background:#C5482D; /*Change this for color of the footer*/
 	padding:5% 0;
 }		
 ul.footer_box{
