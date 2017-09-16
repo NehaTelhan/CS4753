@@ -51,7 +51,7 @@ body a{
  .menu li a:hover ,.menu li.active a{
 	 background:#fff;
 	 color:#000;
- } 
+ }
  #nav .current a {
 	 color:red;
 }
@@ -61,8 +61,8 @@ body a{
 }
 .nav:before,
 .nav:after {
-    content: " "; 
-    display: table; 
+    content: " ";
+    display: table;
 }
 .nav:after {
     clear: both;
@@ -104,7 +104,7 @@ body a{
     	top:15px;
     }
     .nav li ul{
-    	width:100%;   	
+    	width:100%;
     }
     .menu ul{
     	margin:0;
@@ -194,7 +194,7 @@ body a{
 	background: #3CB371 url('../images/img-sprite.png') no-repeat 0px 1px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
     filter: alpha(opacity=0); /* IE 5-7 */
-   
+
 	color: transparent;
 	border: none;
 	outline: none;
@@ -297,12 +297,12 @@ ul.icon1 {
 	-moz-border-top-left-radius: 5px;
 	-o-border-top-left-radius: 5px;
 }
-.icon1 ul li:last-child {   
+.icon1 ul li:last-child {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-	box-shadow: none;    
+	box-shadow: none;
 }
-.icon1 ul a {    
+.icon1 ul a {
 	_height: 10px; /*IE6 only*/
 	white-space: nowrap;
 	float: none;
@@ -324,7 +324,7 @@ ul.icon1 {
 	left: -100px;
 	top: 0%;
 	margin-top: -6px;
-	border-left: 0;	
+	border-left: 0;
 	border-bottom:20px solid transparent;
 	border-top: 20px solid transparent;
 	border-right:20px solid #323757;
@@ -432,7 +432,7 @@ li.list_desc h4 a:hover{
 	text-decoration:none;
     border: none;
 	cursor: pointer;
-	padding:8px 15px; 
+	padding:8px 15px;
 	display: inline-block;
 	outline: none;
 	-webkit-transition: all 0.3s;
@@ -455,7 +455,7 @@ li.list_desc h4 a:hover{
 	text-decoration:none;
     border: none;
 	cursor: pointer;
-	padding:8px 15px; 
+	padding:8px 15px;
 	display: inline-block;
 	outline: none;
 	-webkit-transition: all 0.3s;
@@ -549,7 +549,7 @@ li.list_desc h4 a:hover{
 }
 .content-bottom{
 	width:100%;
-	background: url(../images/bg_image.jpg)no-repeat center top;
+	/*background: url(../images/bg_image.jpg)no-repeat center top;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -557,10 +557,34 @@ li.list_desc h4 a:hover{
 	background-position: center;
 	background-size: 100% 100%;
 	height:100%;
-	padding:15% 0;
+	/*padding:15% 0;*/
+}
+.content_bottom-container {
+  display: table; /* Make the container element behave like a table */
+  width: 100%; /* Set full-width to expand the whole page */
+	background-color: #33935d;
+}
+}
+.content_bottom-img {
+	display: table-cell;
+	src: images/bg_image.jpg
+	width: 60%;
+	height: 100%;
+	float: left;
+	content: url(../images/bg_image.jpg)no-repeat center top;
+	padding:15% 15%;
+}
+.content_bottom-text {
+	color: white;
+	display: table-cell;
+	width: 30%;
+	float: left;
+	padding: 5%;
+
+
 }
 .content_bottom-text h3{
-	color: #FFF;
+	color: black;
 	font-size: 3em;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -777,11 +801,11 @@ p.m_5{
 .footer{
 	background:#33935d;
 	padding:5% 0;
-}		
+}
 ul.footer_box{
 	list-style:none;
 	padding:0;
-}	
+}
 ul.footer_box h4{
 	color:#fff;
 	font-size:1.1em;
@@ -837,7 +861,7 @@ ul.social{
 	list-style:none;
 	padding:0;
 	margin-top: 17%;
-}	
+}
 ul.social li:first-child, ol li:first-child {
 	margin-top: 0px;
 	margin-left: 0;
@@ -845,10 +869,10 @@ ul.social li:first-child, ol li:first-child {
 ul.social li{
 	display:inline-block;
 	margin-right:8px;
-}	
+}
 ul.social li a span:hover{
 	opacity:0.5;
-}		
+}
 li.facebook a span {
 	height: 25px;
 	width: 25px;
@@ -872,13 +896,13 @@ li.pinterest a span {
 	width: 25px;
 	display: block;
 	background: url(../images/img-sprite.png)no-repeat -391px -276px;
-}	
+}
 li.youtube a span {
 	height: 25px;
 	width: 47px;
 	display: block;
 	background: url(../images/img-sprite.png)no-repeat -437px -276px;
-}	
+}
 .dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
 .dropdown dd { position:relative; }
 .dropdown a, .dropdown a:visited { color:#fff; text-decoration:none; outline:none;}
@@ -899,10 +923,10 @@ li.youtube a span {
         .dropdown span.value { display:none;}
         .dropdown dd ul li a { padding:5px; display:block;font-size: 13px;}
         .dropdown dd ul li a:hover { background-color:#444;}
-        
+
         .dropdown img.flag { border:none; vertical-align:middle; margin-left:10px; }
         .flagvisibility { float: right;}
-        
+
 /*--dropdown--*/
 .dropdown {
     display: block;
@@ -1796,9 +1820,9 @@ fieldset.input input[type="submit"]:hover {
 	top: 63px;
 	right: -55px;
  }
-}	
+}
 @media (max-width:1024px){
-.menu li a {	
+.menu li a {
 	padding: 5px 10px;
  }
 .header_right {
@@ -1828,7 +1852,7 @@ fieldset.input input[type="submit"]:hover {
 	font-size: 17px;
 	padding: 12px 11px 14px 63px;
  }
-}	
+}
 @media (max-width:800px){
 .menu {
 	 margin:10px 0 0;
@@ -1918,7 +1942,7 @@ fieldset.input input[type="submit"]:hover {
   .product1{
   	margin-bottom:20px;
   }
-}  
+}
 @media (max-width:768px){
 .login-page {
 	border-right: none;
