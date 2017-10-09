@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Chai Wali - Register</title>
+<title>Chai Wali - Login</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -51,49 +51,47 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<?php include "header.php"; ?>
      <div class="main">
       <div class="shop_top">
-	     <div class="container">
-						<form>
-								<div class="register-top-grid">
-										<h3>PERSONAL INFORMATION</h3>
-										<div>
-											<span>First Name<label>*</label></span>
-											<input type="text">
-										</div>
-										<div>
-											<span>Last Name<label>*</label></span>
-											<input type="text">
-										</div>
-										<div>
-											<span>Email Address<label>*</label></span>
-											<input type="text">
-										</div>
-										<div class="clear"> </div>
-											<a class="news-letter" href="#">
-												<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-											</a>
-										<div class="clear"> </div>
-								</div>
-								<div class="clear"> </div>
-								<div class="register-bottom-grid">
-										<h3>LOGIN INFORMATION</h3>
-										<div>
-											<span>Password<label>*</label></span>
-											<input type="text">
-										</div>
-										<div>
-											<span>Confirm Password<label>*</label></span>
-											<input type="text">
-										</div>
-										<div class="clear"> </div>
-								</div>
-								<div class="clear"> </div>
-								<input type="submit" value="submit">
-						</form>
+		<div class="container">
+			<div class="col-md-6">
+				 <div class="login-page">
+					<h4 class="title">New Customers</h4>
+					<p>Want to introduce new invigorating flavors from around the world to your tastebuds? Join our community now.</p>
+					<div class="button1">
+					   <a href="register.php"><input type="submit" name="Submit" value="Create an Account"></a>
+					 </div>
+					 <div class="clear"></div>
+				  </div>
+				</div>
+				<div class="col-md-6">
+				 <div class="login-title">
+	           		<h4 class="title">Registered Customers</h4>
+					<div id="loginbox" class="loginbox">
+						<form action="" method="post" name="login" id="login-form">
+						  <fieldset class="input">
+						    <p id="login-form-username">
+						      <label for="modlgn_username">Email</label>
+						      <input id="modlgn_username" type="text" name="email" class="inputbox" size="18" autocomplete="off">
+						    </p>
+						    <p id="login-form-password">
+						      <label for="modlgn_passwd">Password</label>
+						      <input id="modlgn_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
+						    </p>
+						    <div class="remember">
+							    <p id="login-form-remember">
+							      <label for="modlgn_remember"><a href="#">Forget Your Password ? </a></label>
+							   </p>
+							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear"></div>
+							 </div>
+						  </fieldset>
+						 </form>
 					</div>
-		   </div>
+			      </div>
+				 <div class="clear"></div>
+			  </div>
+			</div>
+		  </div>
 	  </div>
-
-<!-- Foot Content  -->
+	 <!-- Foot Content  -->
 		<?php include "footer.php"; ?>
 </body>
 </html>

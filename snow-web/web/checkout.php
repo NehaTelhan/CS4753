@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Chai Wali - Register</title>
+<title>Chai Wali - Checkout</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -48,51 +48,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
      </script>
  </head>
 <body>
-	<?php include "header.php"; ?>
+<?php include "header.php"; ?>
+
      <div class="main">
       <div class="shop_top">
-	     <div class="container">
-						<form>
-								<div class="register-top-grid">
-										<h3>PERSONAL INFORMATION</h3>
-										<div>
-											<span>First Name<label>*</label></span>
-											<input type="text">
-										</div>
-										<div>
-											<span>Last Name<label>*</label></span>
-											<input type="text">
-										</div>
-										<div>
-											<span>Email Address<label>*</label></span>
-											<input type="text">
-										</div>
-										<div class="clear"> </div>
-											<a class="news-letter" href="#">
-												<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-											</a>
-										<div class="clear"> </div>
-								</div>
-								<div class="clear"> </div>
-								<div class="register-bottom-grid">
-										<h3>LOGIN INFORMATION</h3>
-										<div>
-											<span>Password<label>*</label></span>
-											<input type="text">
-										</div>
-										<div>
-											<span>Confirm Password<label>*</label></span>
-											<input type="text">
-										</div>
-										<div class="clear"> </div>
-								</div>
-								<div class="clear"> </div>
-								<input type="submit" value="submit">
-						</form>
-					</div>
-		   </div>
+		<div class="container">
+			<h4 class="title">Shopping cart is empty</h4>
+			<p class="cart">You have no items in your shopping cart.<br>Click<a href="index.html"> here</a> to continue shopping</p>
+	     </div>
+	   </div>
 	  </div>
-
 <!-- Foot Content  -->
 		<?php include "footer.php"; ?>
 </body>
