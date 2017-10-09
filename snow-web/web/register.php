@@ -92,7 +92,7 @@ if (isset($_POST['name'])){
 
         } else {
             // echo "Welcome $name. You are registered as $email.";
-            $smsg = "Welcome $name. You are registered as $email.";
+            $smsg = "Welcome $name. You are registered as $email. Click <a href='index.php'>here</a> to return to the home page.";
         }
       } else {
         // $a .= "World!";
