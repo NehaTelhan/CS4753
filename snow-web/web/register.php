@@ -18,6 +18,36 @@ function test_input($data) {
   return $data;
 }
 
+function test_email($data) {
+  if (strpos($data, ".") !== false) {
+    return True;
+  } else {
+    return False;
+  }
+}
+
+function test_address($data) {
+  $check_pattern = '/\d+ [0-9a-zA-Z ]+/';
+  $has_error = !preg_match($check_pattern, $string);
+  // Returns boolean:
+  // 0 = False/ No error
+  // 1 = True/ Has error
+  if ($has_error == 0){
+    return False;
+  } else {
+    return True;
+  }
+}
+
+function test_num($data){
+  if(1 === preg_match('~[0-9]~', $data)){
+    #has numbers
+    return False;
+  } else {
+    return True;
+  }
+}
+
 	include_once('connect.php');
 
   $con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
@@ -37,42 +67,36 @@ if (isset($_POST['name'])){
     $hashed_password = password_hash('$password', PASSWORD_DEFAULT).
     session_start();
     $_SESSION["Email"] = $email;
-    $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
-    if (!mysqli_query($con,$sql))
-      {
-        die('Error: ' . mysqli_error($con));
-        $fmsg ="User Registration Failed";
+    if (test_email($email) && !test_address($address) && test_num($name) && test_num($city) && test_num($state)){
+      $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
+      if (!mysqli_query($con,$sql))
+        {
+          die('Error: ' . mysqli_error($con));
+          $fmsg ="User Registration Failed";
 
+        }
+      else
+        {
+          // echo "Welcome $name. You are registered as $email.";
+          $smsg = "Welcome $name. You are registered as $email.";
+        }
+    } else {
+      // $a .= "World!";
+      $fmsg = "User Registration Failed:";
+      if(!test_email($email)){
+        $fmsg .=" Improperly Formatted Email";
+      } else if(test_address($address)){
+        $fmsg .=" Improperly Formatted Address";
+      } else if(test_address($name)){
+        $fmsg .=" Improperly Formatted Name";
+      } else if(test_address($city)){
+        $fmsg .=" Improperly Formatted City";
+      } else if(test_address($state)){
+        $fmsg .=" Improperly Formatted State";
       }
-    else
-      {
-        // echo "Welcome $name. You are registered as $email.";
-        $smsg = "Welcome $name. You are registered as $email.";
-      }
+    }
     mysqli_close($con);
   }
-    // If the values are posted, insert them into the database.
-    // if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])){
-    //     $name = $_POST['name'];
-	  //     $email = $_POST['email'];
-    //     $address = $_POST['address'];
-    //     $city = $_POST['city'];
-    //     $state = $_POST['state'];
-    //     $zipcode = $_POST['zipcode'];
-    //     $password = $_POST['password'];
-    //
-    //     $query = "INSERT INTO `Users` ('name', 'email', 'address', 'city', 'state', 'zipcode', 'password')
-    //     VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', PASSWORD('$password'))";
-    //
-    //       // INSERT INTO `Users` (`name`, `email`, `address`, `city`, `state`, `zipcode`, `password`)
-    //       // VALUES ('Test4', 'test4@gmail.com', '12333 Testing Street', 'Charlotteville', 'VA', '22903', 'anotherpassword');
-    //     $result = mysqli_query($connection, $query);
-    //     if($result){
-    //         $smsg = "User Created Successfully.";
-    //     }else{
-    //         $fmsg ="User Registration Failed";
-    //     }
-    // }
     ?>
 
 <div class="container">
@@ -81,8 +105,6 @@ if (isset($_POST['name'])){
         <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
         <h2 class="form-signin-heading">Please Register</h2>
         <div class="input-group">
-	  <!-- <span class="input-group-addon" id="basic-addon1">@</span> -->
-	  <!-- <input type="text" name="username" class="form-control" placeholder="Username" required> -->
 	      </div>
         <label for="inputName" class="sr-only">Name</label>
         <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required>
