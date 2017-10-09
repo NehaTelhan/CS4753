@@ -200,7 +200,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   <h4 class="m_4"><a href="#">Black Teas</a></h4>
                   <p class="m_5"> A velvet-smooth indulgence pairing flavors of rich mocha and mascarpone with a soft, nutty-vanilla finish, every sip of this black tea blend is soaked in the atmosphere of an Italian piazza</p>
                 </div>
-                <div class="col-md-3 top_box">
+          <div class="col-md-3 top_box">
 					<div class="view view-ninth"><a href="single.html">
                     <img src="images/homepage/tea3.jpg" class="img-responsive" alt=""/>
                     <div class="mask mask-1"> </div>

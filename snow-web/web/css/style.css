@@ -202,13 +202,8 @@ body a{
 	-webkit-appearance: none;
 }
 .sb-icon-search {
-<<<<<<< HEAD
 	color: #FFF;
 background: #33935d url('../images/img-sprite.png') no-repeat 0px 1px;
-=======
-	color: #3CB371;
-background: #000 url('../images/img-sprite.png') no-repeat 0px 1px;
->>>>>>> b35080025065d92a67a47e28c9bb44a079414c01
 z-index: 90;
 }
 /* Open state */
