@@ -4,32 +4,6 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-
-<<?php
-<?php
-require_once('connect.php');
-$con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
-$email = $_POST['email'];
-$password = $_POST['password'];
-session_start();
-$_SESSION['Email'] = $email;
-$query1 = "SELECT uid,email FROM User";
-$result = mysqli_query($con, $query1);
-while($row = mysqli_fetch_array($result)) {
-  if($row['email'] == $email) {
-    $uid = $row['uid'];
-    //echo "UID IS: $uid";
-  }
-}
-$_SESSION['UID'] = $uid;
-//print_r($_SESSION);
-echo "You are logged in as $email";
-echo "<br>";
-//echo "Your UID is: $uid";
-?>
-
- ?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
