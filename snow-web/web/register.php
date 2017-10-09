@@ -43,7 +43,7 @@ function test_address($data) {
 }
 
 function test_num($data){
-  if(1 === preg_match('~[0-9]~', $data)){
+  if(1 === preg_match('~[0-9]~', $data) || 1 === preg_match('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', $data)){
     #has numbers
     return False;
   } else {
