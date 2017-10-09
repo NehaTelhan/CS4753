@@ -65,21 +65,22 @@ if (isset($_POST['name'])){
     $state = test_input($_POST['state']);
     $zipcode = test_input($_POST['zipcode']);
     $hashed_password = password_hash('$password', PASSWORD_DEFAULT).
+    $check_email = mysqli_num_rows(mysqli_query($con, "SELECT email FROM Users where email = '$email' "));
+    if ($check_email > 0) {
+        $fmsg = "Username already exists";
+    } else {
     session_start();
     $_SESSION["Email"] = $email;
     if (test_email($email) && !test_address($address) && test_num($name) && test_num($city) && test_num($state)){
       $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
-      if (!mysqli_query($con,$sql))
-        {
+      if (!mysqli_query($con,$sql)){
           die('Error: ' . mysqli_error($con));
           $fmsg ="User Registration Failed";
 
-        }
-      else
-        {
+      } else {
           // echo "Welcome $name. You are registered as $email.";
           $smsg = "Welcome $name. You are registered as $email.";
-        }
+      }
     } else {
       // $a .= "World!";
       $fmsg = "User Registration Failed:";
@@ -95,6 +96,7 @@ if (isset($_POST['name'])){
         $fmsg .=" Improperly Formatted State";
       }
     }
+  }
     mysqli_close($con);
   }
     ?>
