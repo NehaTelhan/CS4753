@@ -82,35 +82,35 @@ if (isset($_POST['name'])){
     if ($check_email > 0) {
         $fmsg = "Username already exists";
     } else {
-    session_start();
-    $_SESSION["Email"] = $email;
-    if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !test_address($address) && test_num($name) && test_num($city) && test_num($state) && test_zip($zipcode)){
-      $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
-      if (!mysqli_query($con,$sql)){
-          die('Error: ' . mysqli_error($con));
-          $fmsg ="User Registration Failed";
+      session_start();
+      $_SESSION["Email"] = $email;
+      if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !test_address($address) && test_num($name) && test_num($city) && test_num($state) && test_zip($zipcode)){
+        $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
+        if (!mysqli_query($con,$sql)){
+            die('Error: ' . mysqli_error($con));
+            $fmsg ="User Registration Failed";
 
+        } else {
+            // echo "Welcome $name. You are registered as $email.";
+            $smsg = "Welcome $name. You are registered as $email.";
+        }
       } else {
-          // echo "Welcome $name. You are registered as $email.";
-          $smsg = "Welcome $name. You are registered as $email.";
+        // $a .= "World!";
+        $fmsg = "User Registration Failed:";
+        if(!test_email($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
+          $fmsg .=" Improperly Formatted Email";
+        } else if(test_address($address)){
+          $fmsg .=" Improperly Formatted Address";
+        } else if(!test_num($name)){
+          $fmsg .=" Improperly Formatted Name";
+        } else if(!test_num($city)){
+          $fmsg .=" Improperly Formatted City";
+        } else if(!test_num($state)){
+          $fmsg .=" Improperly Formatted State";
+        } else if(!test_zip($zipcode)){
+          $fmsg .=" Improperly Formatted Zip Code";
+        }
       }
-    } else {
-      // $a .= "World!";
-      $fmsg = "User Registration Failed:";
-      if(!test_email($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $fmsg .=" Improperly Formatted Email";
-      } else if(test_address($address)){
-        $fmsg .=" Improperly Formatted Address";
-      } else if(!test_num($name)){
-        $fmsg .=" Improperly Formatted Name";
-      } else if(!test_num($city)){
-        $fmsg .=" Improperly Formatted City";
-      } else if(!test_num($state)){
-        $fmsg .=" Improperly Formatted State";
-      } else if(!test_zip($zipcode)){
-        $fmsg .=" Improperly Formatted Zip Code";
-      }
-    }
   }
     mysqli_close($con);
   }
