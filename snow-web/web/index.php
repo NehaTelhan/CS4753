@@ -54,7 +54,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
      </script>
 </head>
 <body>
-  <?php include("header.html");?>
+  <?php include "header.php"; ?>
 
 	<div class="banner">
 	<!-- start slider -->
@@ -243,8 +243,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 </div>
 	    </div>
 
-	    <!-- Foot Content  -->
-    <?php include("/footer.html");?>
+    <?php include "footer.php"; ?>
 
 </body>
 </html>
