@@ -71,7 +71,7 @@ if (isset($_POST['name'])){
     } else {
     session_start();
     $_SESSION["Email"] = $email;
-    if (test_email($email) && !test_address($address) && test_num($name) && test_num($city) && test_num($state)){
+    if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !test_address($address) && test_num($name) && test_num($city) && test_num($state)){
       $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
       if (!mysqli_query($con,$sql)){
           die('Error: ' . mysqli_error($con));
@@ -84,7 +84,7 @@ if (isset($_POST['name'])){
     } else {
       // $a .= "World!";
       $fmsg = "User Registration Failed:";
-      if(!test_email($email)){
+      if(!test_email($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
         $fmsg .=" Improperly Formatted Email";
       } else if(test_address($address)){
         $fmsg .=" Improperly Formatted Address";
