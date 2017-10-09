@@ -48,6 +48,16 @@ function test_num($data){
   }
 }
 
+function test_zip($data){
+  if (strlen($data) > 5){
+    return False;
+  } else if (strlen($data) < 5){
+    return False;
+  } else {
+    return True;
+  }
+}
+
 	include_once('connect.php');
 
   $con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
@@ -71,7 +81,7 @@ if (isset($_POST['name'])){
     } else {
     session_start();
     $_SESSION["Email"] = $email;
-    if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !test_address($address) && test_num($name) && test_num($city) && test_num($state)){
+    if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !test_address($address) && test_num($name) && test_num($city) && test_num($state) && test_zip($zipcode)){
       $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
       if (!mysqli_query($con,$sql)){
           die('Error: ' . mysqli_error($con));
@@ -88,12 +98,14 @@ if (isset($_POST['name'])){
         $fmsg .=" Improperly Formatted Email";
       } else if(test_address($address)){
         $fmsg .=" Improperly Formatted Address";
-      } else if(test_address($name)){
+      } else if(!test_num($name)){
         $fmsg .=" Improperly Formatted Name";
-      } else if(test_address($city)){
+      } else if(!test_num($city)){
         $fmsg .=" Improperly Formatted City";
-      } else if(test_address($state)){
+      } else if(!test_num($state)){
         $fmsg .=" Improperly Formatted State";
+      } else if(!test_zip($zipcode)){
+        $fmsg .=" Improperly Formatted Zip Code";
       }
     }
   }
