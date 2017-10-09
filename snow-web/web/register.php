@@ -4,10 +4,13 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
 
-<link rel="stylesheet" href="styles.css" >
+<link href="css/style.css?<?php echo time(); ?>" rel='stylesheet' type='text/css' />
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<?php include "header.php"; ?>
+
 
 <?php
 
@@ -28,7 +31,7 @@ function test_email($data) {
 
 function test_address($data) {
   $check_pattern = '/\d+ [0-9a-zA-Z ]+/';
-  $has_error = !preg_match($check_pattern, $string);
+  $has_error = !preg_match($check_pattern, $data);
   // Returns boolean:
   // 0 = False/ No error
   // 1 = True/ Has error
@@ -117,9 +120,7 @@ if (isset($_POST['name'])){
       <form class="form-signin" method="POST">
         <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
         <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
-        <h2 class="form-signin-heading">Please Register</h2>
-        <div class="input-group">
-	      </div>
+        <h2 class="register-top-grid">Please Register</h2>
         <label for="inputName" class="sr-only">Name</label>
         <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required>
         <label for="inputEmail" class="sr-only">Email address</label>
@@ -138,3 +139,5 @@ if (isset($_POST['name'])){
         <!-- <a class="btn btn-lg btn-primary btn-block" href="login.php">Login</a> -->
       </form>
 </div>
+
+<?php include "footer.php"; ?>

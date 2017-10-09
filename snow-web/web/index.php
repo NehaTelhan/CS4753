@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>ChaiWali</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css?<?php echo time(); ?>" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -200,7 +200,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   <h4 class="m_4"><a href="#">Black Teas</a></h4>
                   <p class="m_5"> A velvet-smooth indulgence pairing flavors of rich mocha and mascarpone with a soft, nutty-vanilla finish, every sip of this black tea blend is soaked in the atmosphere of an Italian piazza</p>
                 </div>
-                <div class="col-md-3 top_box">
+          <div class="col-md-3 top_box">
 					<div class="view view-ninth"><a href="single.html">
                     <img src="images/homepage/tea3.jpg" class="img-responsive" alt=""/>
                     <div class="mask mask-1"> </div>
