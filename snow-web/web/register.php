@@ -92,7 +92,7 @@ if (isset($_POST['name'])){
     $hashed_password = password_hash('$password', PASSWORD_DEFAULT).
     $check_email = mysqli_num_rows(mysqli_query($con, "SELECT email FROM Users where email = '$email' "));
     if ($check_email > 0) {
-        $fmsg = "Username already exists";
+        $fmsg = "User Account already exists";
     } else {
       session_start();
       $_SESSION["Email"] = $email;
@@ -140,32 +140,32 @@ if (isset($_POST['name'])){
             <label for="inputName" class="sr-only">Name </label>
             <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required>
           </div>
-          
+
           <div class="form-group">
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           </div>
-          
+
           <div class="form-group">
             <label for="inputAddress" class="sr-only">Mailing Address</label>
             <input type="text" name="address" id="inputAddress" class="form-control" placeholder="Mailing address" required>
           </div>
-          
+
           <div class="form-group">
             <label for="inputCity" class="sr-only">City</label>
             <input type="text" name="city" id="inputCity" class="form-control" placeholder="City" required>
           </div>
-          
+
           <div class="form-group">
             <label for="inputState" class="sr-only">State</label>
             <input type="text" name="state" id="inputState" class="form-control" placeholder="State" required>
           </div>
-          
+
           <div class="form-group">
             <label for="inputZip" class="sr-only">Zip Code</label>
             <input type="number" name="zipcode" id="inputZip" class="form-control" placeholder="Zip Code" required>
           </div>
-          
+
           <div class="form-group">
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
