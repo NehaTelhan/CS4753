@@ -80,16 +80,16 @@ h1,h2,h3,h4,ul {
       <div class="shop_top">
 		<div class="container">
       <div class="row">
-        <h3 class='m_2', style="font-size:20px ! important">Chai Wali's Vision</h3>
-        <div class="col-md-8">
+        <h2 style="font-size:20px ! important">Chai Wali's Vision</h2>
+        
+        <div class="col-md-6"> <img src="images/test.png"> </div>
 
-          <p class="m_7">Chai Walli is an organic fair trade tea shop that started with a dream. The dream was to spread the nourishing benefits of tea, enjoyed by so many cultures, across the globe and into as many homes as possible. Chai Walli seeks to take you on an adventure through the frigid winters of the Himalayas and into the glorious cherry blossom laden streets of Japan. When you take a sip of Chai Walli’s Organic Chai we want you to feel the sights and smells of India all around you as you are surrounded by a comforting nourishing cloud of cardamom and cinnamon.</p>
-        </div>
-        <div class="col-md-4">
-          <div style="display: flex; justify-content: center;">
+          <!-- <p class="m_7">Chai Walli is an organic fair trade tea shop that started with a dream. The dream was to spread the nourishing benefits of tea, enjoyed by so many cultures, across the globe and into as many homes as possible. Chai Walli seeks to take you on an adventure through the frigid winters of the Himalayas and into the glorious cherry blossom laden streets of Japan. When you take a sip of Chai Walli’s Organic Chai we want you to feel the sights and smells of India all around you as you are surrounded by a comforting nourishing cloud of cardamom and cinnamon.</p> -->
+
+        <div class="col-md-6" style="display: flex; justify-content: center;">
            <img src="images/chaiwali.png" align="top" width="50%" height="50%" alt=""/>
-         </div>
         </div>
+
       </div>
 
       <hr>
