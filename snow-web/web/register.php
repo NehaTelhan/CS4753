@@ -9,10 +9,15 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
 <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 <style>
 h1,h2,h3,h4,ul {
     font-family: 'Merienda';font-size: 22px;
+}
+body {
+  font-family: 'Raleway';
 }
 </style>
 

@@ -14,10 +14,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
 <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 <style>
 h1,h2,h3,h4,ul {
     font-family: 'Merienda';font-size: 22px;
+}
+body {
+  font-family: 'Raleway';
 }
 </style>
 
@@ -104,6 +109,7 @@ h1,h2,h3,h4,ul {
           <!-- spacing column-->
         <!-- </div> -->
 				<div class="col-md-10">
+          <br>
 					<h3>Neha Telhan
           <br>
           <small>
@@ -116,8 +122,7 @@ h1,h2,h3,h4,ul {
 				</div>
 			</div>
 
-      <hr>
-
+      <br> <hr> 
 			<div class="row">
         <h3 class="m_2", style="font-size:20px ! important">Advantages</h3>
         <div class="col-md-6 top_box">
