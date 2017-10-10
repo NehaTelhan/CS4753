@@ -129,7 +129,7 @@ if (isset($_POST['name'])){
     ?>
 
 <div class="container" align="center">
-        <form class="form-signin form-horizontal" method="POST" action="/action_page.php" align="center" style="width: 600px">
+        <form class="form-signin form-horizontal" method="POST" align="center" style="width: 600px">
           <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
           <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
           <br>

@@ -66,7 +66,7 @@ body {
       <div class="shop_top">
 		<div class="container">
 			<div class="row shop_box-top">
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic5.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
@@ -86,7 +86,7 @@ body {
 					    </ul>
 				    </div>
 				</a></div>
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic6.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
@@ -102,7 +102,7 @@ body {
 					    </ul>
 				    </div>
 				</a></div>
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic7.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
@@ -122,7 +122,7 @@ body {
 					    </ul>
 				    </div>
 				</a></div>
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic8.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
@@ -141,7 +141,7 @@ body {
 				</a></div>
 			</div>
 			<div class="row">
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic9.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
@@ -157,7 +157,7 @@ body {
 					    </ul>
 				    </div>
 				</a></div>
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic10.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
@@ -176,7 +176,7 @@ body {
 					    </ul>
 				    </div>
 				</a></div>
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic11.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
@@ -193,7 +193,7 @@ body {
 					    </ul>
 				    </div>
 				</a></div>
-				<div class="col-md-3 shop_box"><a href="single.html">
+				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic12.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
 						<span class="new-label">New</span>
