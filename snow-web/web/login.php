@@ -13,6 +13,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+<style>
+h1,h2,h3,h4,ul {
+    font-family: 'Merienda';font-size: 22px;
+}
+</style>
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
@@ -56,6 +64,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <div class="login-page">
 					<h4 class="title">New Customers</h4>
 					<p>Want to introduce new invigorating flavors from around the world to your tastebuds? Join our community now.</p>
+
+					<!-- <button href="register.php" class="btn btn-lg " style="color:white; background:black" type="submit">Create an Account</button> -->
+
 					<div class="button1">
 					   <a href="register.php"><input type="submit" name="Submit" value="Create an Account"></a>
 					 </div>
@@ -80,7 +91,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							    <p id="login-form-remember">
 							      <label for="modlgn_remember"><a href="#">Forget Your Password ? </a></label>
 							   </p>
-							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear"></div>
+							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear">
+							    	
+							    </div>
 							 </div>
 						  </fieldset>
 						 </form>

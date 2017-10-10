@@ -9,6 +9,13 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+<style>
+h1,h2,h3,h4,ul {
+    font-family: 'Merienda';font-size: 22px;
+}
+</style>
+
 <?php include "header.php"; ?>
 
 
@@ -116,28 +123,53 @@ if (isset($_POST['name'])){
   }
     ?>
 
-<div class="container">
-      <form class="form-signin" method="POST">
-        <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
-        <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
-        <h2 class="register-top-grid">Please Register</h2>
-        <label for="inputName" class="sr-only">Name</label>
-        <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputAddress" class="sr-only">Mailing Address</label>
-        <input type="text" name="address" id="inputAddress" class="form-control" placeholder="Mailing address" required>
-        <label for="inputCity" class="sr-only">City</label>
-        <input type="text" name="city" id="inputCity" class="form-control" placeholder="City" required>
-        <label for="inputState" class="sr-only">State</label>
-        <input type="text" name="state" id="inputState" class="form-control" placeholder="State" required>
-        <label for="inputZip" class="sr-only">Zip Code</label>
-        <input type="number" name="zipcode" id="inputZip" class="form-control" placeholder="Zip Code" required>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-        <!-- <a class="btn btn-lg btn-primary btn-block" href="login.php">Login</a> -->
+<div class="container" align="center">
+        <form class="form-signin form-horizontal" method="POST" action="/action_page.php" align="center" style="width: 600px">
+          <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+          <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
+          <br>
+          <h2 class="register-top-grid">Please Register to Sign Up!</h2>
+          <br>
+
+          <div class="form-group">
+            <label for="inputName" class="sr-only">Name </label>
+            <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputAddress" class="sr-only">Mailing Address</label>
+            <input type="text" name="address" id="inputAddress" class="form-control" placeholder="Mailing address" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputCity" class="sr-only">City</label>
+            <input type="text" name="city" id="inputCity" class="form-control" placeholder="City" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputState" class="sr-only">State</label>
+            <input type="text" name="state" id="inputState" class="form-control" placeholder="State" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputZip" class="sr-only">Zip Code</label>
+            <input type="number" name="zipcode" id="inputZip" class="form-control" placeholder="Zip Code" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          </div>
+
+          <button class="btn btn-lg " style="color:white; background:black" type="submit">Register</button>
+          <!-- <a class="btn btn-lg btn-primary btn-block" href="login.php">Login</a> -->
       </form>
+      <br>
 </div>
 
 <?php include "footer.php"; ?>

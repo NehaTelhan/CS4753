@@ -4,29 +4,29 @@
   <div class="row">
     <div class="col-md-3">
       <ul class="footer_box">
-        <h4>Products</h4>
-        <li><a href="shop.php">Shop Now</a></li>
+        <h4 style="font-size: 75%" >Products</h4>
+        <li><a style="font-size: 60%" href="shop.php">Shop Now</a></li>
       </ul>
     </div>
     <div class="col-md-3">
       <ul class="footer_box">
-        <h4>About</h4>
-        <li><a href="about.php">Who We Are</a></li>
+        <h4 style="font-size: 75%" >About</h4>
+        <li><a style="font-size: 60%" href="about.php">Who We Are</a></li>
       </ul>
     </div>
     <div class="col-md-3">
       <ul class="footer_box">
-        <h4>Customer Support</h4>
-        <li><a href="contact.php">Contact Us</a></li>
+        <h4 style="font-size: 75%" >Customer Support</h4>
+        <li><a style="font-size: 60%" href="contact.php">Contact Us</a></li>
       </ul>
     </div>
     <div class="col-md-3">
       <ul class="footer_box">
-        <h4>Newsletter</h4>
+        <h4 style="font-size: 75%" >Newsletter</h4>
         <div class="footer_search">
              <form>
-            <input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
-            <input type="submit" value="Go">
+            <input style="font-size: 60%"  type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+            <input style="font-size: 70%" type="submit" value="Go">
              </form>
             </div>
         <ul class="social">
