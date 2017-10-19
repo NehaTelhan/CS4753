@@ -75,13 +75,13 @@ body {
 						<span class="sale-label">Sale!</span>
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Fall Teas</a></h3>
+						<p>Autumn is here! Enjoy it with a nice cup of tea! </p>
+						<span class="reducedfrom">$35.00</span>
+						<span class="actual">$10.75</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
@@ -89,15 +89,17 @@ body {
 				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic6.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
-						<span class="new-label">New</span>
+						<!-- <span class="new-label">New</span> -->
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Green Teas</span></h3>
+
+						<p>Full-bodied green tea flavor! </p>
+						<span class="reducedfrom">$24.00</span>
+						<span class="actual">$8.25</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
@@ -105,19 +107,20 @@ body {
 				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic7.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
-						<span class="new-label">New</span>
+						<!-- <span class="new-label">New</span> -->
 					</span>
 					<span class="sale-box">
-						<span class="sale-label">Sale!</span>
+						<!-- <span class="sale-label">Sale!</span> -->
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Chai Teas</span></h3>
+
+						<p>Sweet and spicy infusion! </p>
+						<span class="reducedfrom">$45.00</span>
+						<span class="actual">$21.75</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
@@ -125,16 +128,17 @@ body {
 				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic8.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
-						<span class="new-label">New</span>
+						<!-- <span class="new-label">New</span> -->
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Classic Teas</span></h3>
+
+						<p>A jubilant holiday delight.! </p>
+						<span class="reducedfrom">$21.00</span>
+						<span class="actual">$6.50</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
@@ -144,15 +148,17 @@ body {
 				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic9.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
-						<span class="new-label">New</span>
+						<!-- <span class="new-label">New</span> -->
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Coni Teas</span></h3>
+
+						<p>Tis the season for festive flavors! </p>
+						<span class="reducedfrom">$35.00</span>
+						<span class="actual">$10.75</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
@@ -160,18 +166,20 @@ body {
 				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic10.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
-						<span class="new-label">New</span>
+						<!-- <span class="new-label">New</span> -->
 					</span>
 					<span class="sale-box">
-						<span class="sale-label">Sale!</span>
+						<!-- <span class="sale-label">Sale!</span> -->
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Iced Teas</span></h3>
+
+						<p>A new take on a summer classic! </p>
+						<span class="reducedfrom">$26.00</span>
+						<span class="actual">$17.00</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
@@ -179,16 +187,17 @@ body {
 				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic11.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
-						<span class="new-label">New</span>
+						<!-- <span class="new-label">New</span> -->
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Kosher Teas</span></h3>
+
+						<p>Smooth orchid aroma throughout with a clean, refreshing finish! </p>
+						<span class="reducedfrom">$45.00</span>
+						<span class="actual">$22.00</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
@@ -196,19 +205,20 @@ body {
 				<div class="col-md-3 shop_box"><a href="single.php">
 					<img src="images/pic12.jpg" class="img-responsive" alt=""/>
 					<span class="new-box">
-						<span class="new-label">New</span>
+						<!-- <span class="new-label">New</span> -->
 					</span>
 					<span class="sale-box">
-						<span class="sale-label">Sale!</span>
+						<!-- <span class="sale-label">Sale!</span> -->
 					</span>
 					<div class="shop_desc">
-						<h3><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Organic Teas</span></h3>
+
+						<p>Flowering tea are beautiful hand-tied tea balls that unfurl as the steep! </p>
+						<span class="reducedfrom">$35.00</span>
+						<span class="actual">$10.75</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
-							<li class="shop_btn"><a href="#">Read More</a></li>
+							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
+							<!-- <li class="shop_btn"><a href="#">Read More</a></li> -->
 							<div class="clear"> </div>
 					    </ul>
 				    </div>

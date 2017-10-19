@@ -128,9 +128,15 @@ body {
 					    </div>
 				        <!-- end product_slider -->
 				        <div class="single_right">
-				        	<h3>hendrerit in vulputate velit </h3>
-				        	<p class="m_10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
-				        	<ul class="options">
+				        	<img src="images/jasmine_pearls.jpg" class="img-responsive" alt=""/>
+
+				        	<h3>JASMINE DRAGON PHOENIX PEARLS</h3>
+				        	<p class="m_10"> <b>Smooth green tea with a rich jasmine bouquet</b>
+
+							Young green tea leaves are scented 3-4 times with summery blossoms of fresh jasmine, this tea is a phenomenon of fragrance and sweetness. Three leaves are hand rolled into pearls that slowly unfold the rich and smooth sweet floral flavor.
+							</p>
+				        	
+				        	<!-- <ul class="options">
 								<h4 class="m_12">Select a Size(cm)</h4>
 								<li><a href="#">151</a></li>
 								<li><a href="#">148</a></li>
@@ -148,15 +154,15 @@ body {
 								<li><a class="color5" href="#"><span> </span></a></li>
 								<li><a class="color6" href="#"><span> </span></a></li>
 								<div class="clear"> </div>
-							</ul>
-							<div class="btn_form">
+							</ul> -->
+							<!-- <div class="btn_form">
 							   <form>
 								 <input type="submit" value="buy now" title="">
 							  </form>
-							</div>
-							<ul class="add-to-links">
+							</div> -->
+							<!-- <ul class="add-to-links">
     			              <li><img src="images/wish.png" alt=""><a href="#">Add to wishlist</a></li>
-    			            </ul>
+    			            </ul> -->
 							<div class="social_buttons">
 								<h4>95 Items</h4>
 								<button type="button" class="btn1 btn1-default1 btn1-twitter" onclick="">
@@ -177,9 +183,11 @@ body {
 				</div>
 				<div class="col-md-3">
 				  <div class="box-info-product">
-					<p class="price2">$130.25</p>
+					<p class="price2">$10.75</p>
+						<hr>
 					       <ul class="prosuct-qty">
-								<span>Quantity:</span>
+					       	<p> 2 oz makes 20 - 25 cups</p>
+								<!-- <span>Quantity:</span>
 								<select>
 									<option>1</option>
 									<option>2</option>
@@ -187,62 +195,72 @@ body {
 									<option>4</option>
 									<option>5</option>
 									<option>6</option>
-								</select>
+								</select> -->
 							</ul>
-							<button type="submit" name="Submit" class="exclusive">
+							<!-- <button type="submit" name="Submit" class="exclusive">
 							   <span>Add to cart</span>
-							</button>
+							</button> -->
+							<form action="https://test.bitpay.com/checkout" method="post" >
+							  <input type="hidden" name="action" value="checkout" />
+							  <input type="hidden" name="posData" value="" />
+							  <input type="hidden" name="data" value="GUL8+szLiINkfuhKbNtbmlRXwI7iILy7qVFR37/vImYxxrg/IB8JKJRZHwM3QA6ZzUEdk5+m4bRs4hyp7wMnKNJ08u3MTmB9CA/IZirrAOS9+60YleJL+HC3seFMSQJY9GZl5QQPcAiqKvqwy29BXw==" />
+							  <input type="image" src="https://test.bitpay.com/img/button-medium.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+							</form>
 				   </div>
 			   </div>
 			</div>
-			<div class="desc">
+			<!-- <div class="desc">
 			   	<h4>Description</h4>
 			   	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores</p>
-			</div>
+			</div> -->
 			<div class="row">
+				<br>
+				<hr>
+				<br>
 				<h4 class="m_11">Related Products in the same Category</h4>
 				<div class="col-md-4 product1">
-					<img src="images/s1.jpg" class="img-responsive" alt=""/>
 					<div class="shop_desc"><a href="single.html">
-						</a><h3><a href="single.html"></a><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<img src="images/experiences/fallteas.jpg" class="img-responsive" alt=""/ style="height: 50%; width: 50%;">
+						</a><h3><a href="single.html"></a><a href="#">Fall Teas</a></h3>
+						<p>Bold, bright flavors of pink grapefruit, balanced by sweet strawberries, apples, and lemongrass</p>
+						<span class="reducedfrom">$16.00</span>
+						<span class="actual">$7.50</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
+							<li class="cart"><a href="#"></a></li>
 							<li class="shop_btn"><a href="#">Read More</a></li>
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
 				</div>
 				<div class="col-md-4 product1">
-					<img src="images/s2.jpg" class="img-responsive" alt=""/>
 					<div class="shop_desc"><a href="single.html">
-						</a><h3><a href="single.html"></a><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<img src="images/experiences/chai.jpg" class="img-responsive" alt=""/ style="height: 50%; width: 50%;">
+						</a><h3><a href="single.html"></a><a href="#">Chai</a></h3>
+						<p>Spicy infusion of ginger, pepper, and cloves with cinnamon undertones</p>
+						<span class="reducedfrom">$17.00</span>
+						<span class="actual">$9.50</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
+							<li class="cart"><a href="#"></a></li>
 							<li class="shop_btn"><a href="#">Read More</a></li>
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
 				</div>
-				<div class="col-md-4">
-					<img src="images/s3.jpg" class="img-responsive" alt=""/>
+				<div class="col-md-4 product1">
 					<div class="shop_desc"><a href="single.html">
-						</a><h3><a href="single.html"></a><a href="#">aliquam volutp</a></h3>
-						<p>Lorem ipsum consectetuer adipiscing </p>
-						<span class="reducedfrom">$66.00</span>
-						<span class="actual">$12.00</span><br>
+						<img src="images/experiences/kosher.jpg" class="img-responsive" alt=""/ style="height: 50%; width: 50%;">
+						</a><h3><a href="single.html"></a><a href="#">Rare Teas</a></h3>
+						<p>Lightly smoky beginning, softly sweet middle, and green tea finish</p>
+						<span class="reducedfrom">$21.00</span>
+						<span class="actual">$14.50</span><br>
 						<ul class="buttons">
-							<li class="cart"><a href="#">Add To Cart</a></li>
+							<li class="cart"><a href="#"></a></li>
 							<li class="shop_btn"><a href="#">Read More</a></li>
 							<div class="clear"> </div>
 					    </ul>
 				    </div>
 				</div>
+				
 			</div>
 	     </div>
 	   </div>
