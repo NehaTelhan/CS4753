@@ -25,6 +25,14 @@ body {
 
 
 <?php
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+//Load composer's autoloader
+require 'vendor/autoload.php';
+
 $address_special_chars = false;
 $something_has_num_or_special_char = false;
 $zip_too_short = false;
@@ -117,6 +125,7 @@ if (isset($_POST['name'])){
         } else {
             // echo "Welcome $name. You are registered as $email.";
             $smsg = "Welcome $name. You are registered as $email. Click <a href='index.php'>here</a> to return to the home page.";
+            send_email($email, $name);
         }
       } else {
         // $a .= "World!";
@@ -158,6 +167,46 @@ if (isset($_POST['name'])){
   }
     mysqli_close($con);
   }
+
+
+function send_email($email, $name) {
+  $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+  try {
+      //Server settings
+      $mail->SMTPDebug = false;                                 // Enable verbose debug output
+      $mail->isSMTP();                                      // Set mailer to use SMTP
+      $mail->Host = 'smtp.gmail.com'; ;  // Specify main and backup SMTP servers
+      $mail->SMTPAuth = true;                               // Enable SMTP authentication
+      $mail->Username = 'chaiwalli12@gmail.com';                 // SMTP username
+      $mail->Password = 'welovechai$$$$';                           // SMTP password
+      $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+      $mail->Port = 587;                                    // TCP port to connect to
+
+      //Recipients
+      $mail->setFrom('chaiwalli12@gmail.com', 'Sadiyah from Chai Walli');
+      $mail->addAddress($email, $name);     // Add a recipient
+      // $mail->addAddress('ellen@example.com');               // Name is optional
+      // $mail->addReplyTo('info@example.com', 'Information');
+      // $mail->addCC('cc@example.com');
+      // $mail->addBCC('bcc@example.com');
+
+      //Attachments
+      // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+      // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+      //Content
+      $mail->isHTML(true);                                  // Set email format to HTML
+      $mail->Subject = 'Welcome to Chai Walli';
+      $mail->Body    = 'Thank you so much for registering! We look forward to offering you wonderful high quality teas!';
+      $mail->AltBody = 'Thank you so much for registering! We look forward to offering you wonderful high quality teas!';
+
+      $mail->send();
+      // echo 'Message has been sent';
+  } catch (Exception $e) {
+      // echo 'Message could not be sent.';
+      // echo 'Mailer Error: ' . $mail->ErrorInfo;
+  }
+}
     ?>
 
 <div class="container" align="center">
@@ -168,7 +217,7 @@ if (isset($_POST['name'])){
           <h2 class="register-top-grid">Please Register to Sign Up!</h2>
           <br>
 
-          <label for="inputName" style="float:left"> <b>Name:</b> </label>
+          <label for="inputName" style="float:left" align="left"> <b>Name:</b> </label>
           <div class="form-group" align="horizontal" >
             <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required>
           </div>
