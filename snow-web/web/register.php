@@ -25,6 +25,10 @@ body {
 
 
 <?php
+$address_special_chars = false;
+$something_has_num_or_special_char = false;
+$zip_too_short = false;
+$zip_too_long = false;
 
 function test_input($data) {
   $data = trim($data);
@@ -48,7 +52,12 @@ function test_address($data) {
   // 0 = False/ No error
   // 1 = True/ Has error
   if ($has_error == 0){
-    return False;
+    if(1 === preg_match('/[$%^&*()+=\-\[\]\';,\/{}|":<>?~\\\\]/', $data)){
+      $address_special_chars = true;
+      return True;
+    } else {
+      return False;
+    }
   } else {
     return True;
   }
@@ -57,6 +66,7 @@ function test_address($data) {
 function test_num($data){
   if(1 === preg_match('~[0-9]~', $data) || 1 === preg_match('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', $data)){
     #has numbers
+    $something_has_num_or_special_char = true;
     return False;
   } else {
     return True;
@@ -65,8 +75,10 @@ function test_num($data){
 
 function test_zip($data){
   if (strlen($data) > 5){
+    $zip_too_long = true;
     return False;
   } else if (strlen($data) < 5){
+    $zip_too_short = true;
     return False;
   } else {
     return True;
@@ -110,17 +122,37 @@ if (isset($_POST['name'])){
         // $a .= "World!";
         $fmsg = "User Registration Failed:";
         if(!test_email($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
-          $fmsg .=" Improperly Formatted Email";
+          $fmsg .=" Improperly Formatted Email ";
         } else if(test_address($address)){
-          $fmsg .=" Improperly Formatted Address";
+          if($address_special_chars){
+            $fmsg .=" Addresses Cannot Contain Special Characters Aside From # and . ";
+          } else {
+            $fmsg .=" Improperly Formatted Address ";
+          }
         } else if(!test_num($name)){
-          $fmsg .=" Improperly Formatted Name";
+          if($something_has_num_or_special_char) {
+            $fmsg .=" Names Cannot Contain Special Characters or Numbers ";
+          } else {
+            $fmsg .=" Improperly Formatted Name ";
+          }
         } else if(!test_num($city)){
-          $fmsg .=" Improperly Formatted City";
+          if($something_has_num_or_special_char) {
+            $fmsg .=" Cities Cannot Contain Special Characters or Numbers ";
+          } else {
+            $fmsg .=" Improperly Formatted City ";
+          }
         } else if(!test_num($state)){
-          $fmsg .=" Improperly Formatted State";
+          if($something_has_num_or_special_char) {
+            $fmsg .=" States Cannot Contain Special Characters or Numbers ";
+          } else {
+            $fmsg .=" Improperly Formatted State ";
+          }
         } else if(!test_zip($zipcode)){
-          $fmsg .=" Improperly Formatted Zip Code";
+          if($zip_too_short || $zip_too_long){
+            $fmsg .=" Zip Codes Must Be 5 Numbers ";
+          } else {
+            $fmsg .=" Improperly Formatted Zip Code ";
+          }
         }
       }
   }
@@ -158,7 +190,60 @@ if (isset($_POST['name'])){
 
           <label for="inputState" style="float:left"><b>State:</b></label>
           <div class="form-group">
-            <input type="text" name="state" id="inputState" class="form-control" placeholder="State" required>
+            <!-- <input type="text" name="state" id="inputState" class="form-control" placeholder="State" required> -->
+            <select name="state" id="inputState" class="form-control" placeholder="State" required>
+            	<option value="AL">Alabama</option>
+            	<option value="AK">Alaska</option>
+            	<option value="AZ">Arizona</option>
+            	<option value="AR">Arkansas</option>
+            	<option value="CA">California</option>
+            	<option value="CO">Colorado</option>
+            	<option value="CT">Connecticut</option>
+            	<option value="DE">Delaware</option>
+            	<option value="DC">District of Columbia</option>
+            	<option value="FL">Florida</option>
+            	<option value="GA">Georgia</option>
+            	<option value="HI">Hawaii</option>
+            	<option value="ID">Idaho</option>
+            	<option value="IL">Illinois</option>
+            	<option value="IN">Indiana</option>
+            	<option value="IA">Iowa</option>
+            	<option value="KS">Kansas</option>
+            	<option value="KY">Kentucky</option>
+            	<option value="LA">Louisiana</option>
+            	<option value="ME">Maine</option>
+            	<option value="MD">Maryland</option>
+            	<option value="MA">Massachusetts</option>
+            	<option value="MI">Michigan</option>
+            	<option value="MN">Minnesota</option>
+            	<option value="MS">Mississippi</option>
+            	<option value="MO">Missouri</option>
+            	<option value="MT">Montana</option>
+            	<option value="NE">Nebraska</option>
+            	<option value="NV">Nevada</option>
+            	<option value="NH">New Hampshire</option>
+            	<option value="NJ">New Jersey</option>
+            	<option value="NM">New Mexico</option>
+            	<option value="NY">New York</option>
+            	<option value="NC">North Carolina</option>
+            	<option value="ND">North Dakota</option>
+            	<option value="OH">Ohio</option>
+            	<option value="OK">Oklahoma</option>
+            	<option value="OR">Oregon</option>
+            	<option value="PA">Pennsylvania</option>
+            	<option value="RI">Rhode Island</option>
+            	<option value="SC">South Carolina</option>
+            	<option value="SD">South Dakota</option>
+            	<option value="TN">Tennessee</option>
+            	<option value="TX">Texas</option>
+            	<option value="UT">Utah</option>
+            	<option value="VT">Vermont</option>
+            	<option value="VA">Virginia</option>
+            	<option value="WA">Washington</option>
+            	<option value="WV">West Virginia</option>
+            	<option value="WI">Wisconsin</option>
+            	<option value="WY">Wyoming</option>
+            </select>
           </div>
 
           <label for="inputZip" style="float:left"><b>Zip Code:</b> </label>
