@@ -136,38 +136,38 @@ if (isset($_POST['name'])){
           <h2 class="register-top-grid">Please Register to Sign Up!</h2>
           <br>
 
-          <div class="form-group">
-            <label for="inputName" class="sr-only">Name </label>
+          <label for="inputName" style="float:left"> <b>Name:</b> </label>
+          <div class="form-group" align="horizontal" >
             <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required>
           </div>
 
+          <label for="inputEmail" style="float:left"> <b>Email address: </b></label>
           <div class="form-group">
-            <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           </div>
 
+          <label for="inputAddress" style="float:left"><b>Mailing Address:</b></label>
           <div class="form-group">
-            <label for="inputAddress" class="sr-only">Mailing Address</label>
             <input type="text" name="address" id="inputAddress" class="form-control" placeholder="Mailing address" required>
           </div>
 
+          <label for="inputCity" style="float:left"><b>City:</b></label>
           <div class="form-group">
-            <label for="inputCity" class="sr-only">City</label>
             <input type="text" name="city" id="inputCity" class="form-control" placeholder="City" required>
           </div>
 
+          <label for="inputState" style="float:left"><b>State:</b></label>
           <div class="form-group">
-            <label for="inputState" class="sr-only">State</label>
             <input type="text" name="state" id="inputState" class="form-control" placeholder="State" required>
           </div>
 
+          <label for="inputZip" style="float:left"><b>Zip Code:</b> </label>
           <div class="form-group">
-            <label for="inputZip" class="sr-only">Zip Code</label>
             <input type="number" name="zipcode" id="inputZip" class="form-control" placeholder="Zip Code" required>
           </div>
 
+          <label for="inputPassword" style="float:left"><b>Password: </b></label>
           <div class="form-group">
-            <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
           </div>
 
