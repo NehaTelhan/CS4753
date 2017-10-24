@@ -131,8 +131,8 @@ body {
 				<div class="col-md-5">
 					<p class="m_8"><b>Chaiwali</b> Head Quarters is located in Pompano Beach, FL. But we're opening locations nation wide, and have offices internaltionally to best communicate with out tea providers. Sign up for a tour of a village and meet the individuals that harvest your cup of tea. <br>Or send us an e-mail letting us know what you think about Chaiwali.</p>
 					<div class="address">
-				                <p>500 Lorem Ipsum Dolor Sit,</p>
-						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
+				                <p>500 NE 46th St,</p>
+						   		<p>Lighthouse Point, FL, 33064</p>
 						   		<p>USA</p>
 				   		<p>Phone:(00) 222 666 444</p>
 				   		<p>Fax: (000) 000 00 00 0</p>
