@@ -25,7 +25,7 @@ body {
 }
 </style>
 
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
         $(document).ready(function() {
@@ -57,10 +57,68 @@ body {
                 $(".dropdown img.flag").toggleClass("flagvisibility");
             });
         });
-     </script>
+     </script> -->
  </head>
 <body>
 	<?php include "header.php"; ?>
+  <?php
+
+  require 'vendor/autoload.php';
+
+  function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+  function test_email($data) {
+    if (strpos($data, ".") !== false) {
+      return True;
+    } else {
+      return False;
+    }
+  }
+
+  include_once('connect.php');
+
+  $con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
+  // Check connection
+  if (mysqli_connect_errno())
+  {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+  // Form the SQL query (an INSERT query)
+  if(isset($_POST['name'])){
+    $name = test_input($_POST['name']);
+    $email = test_input($_POST['email']);
+    $subject = test_input($_POST['subject']);
+    $message = test_input($_POST['message']);
+    $_SESSION["Email"] = $email;
+    if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $sql="INSERT INTO contact_requests (name, email, subject, message) VALUES ('$name', '$email', '$subject', '$message')";
+      if (!mysqli_query($con,$sql)){
+          die('Error: ' . mysqli_error($con));
+          $fmsg ="Contact request failed";
+
+      } else {
+          // echo "Welcome $name. You are registered as $email.";
+          $smsg = "Thanks for the contacting us, $name. One of our representatives will get back to you at: $email. Click <a href='index.php'>here</a> to return to the home page.";
+      }
+    } else {
+      $fmsg = "Contact request failed:";
+      if(!test_email($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $fmsg .=" Improperly Formatted Email ";
+
+      }
+
+    }
+    mysqli_close($con);
+  }
+
+
+   ?>
+
      <div class="main">
       <div class="shop_top">
 		<div class="container">
@@ -85,21 +143,32 @@ body {
 			</div>
 			<div class="row">
 				<div class="col-md-12 contact">
-				  <form method="post" action="contact-post.html">
+				  <form method="POST">
+            <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+            <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
 					<div class="to">
-                     	<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-					 	<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
-					</div>
+
+            <div class="form-group">
+              <input type="text" name="name" id="inputName" placeholder="Name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text"  name="subject" id="inputSubject" class="form-control" placeholder="Subject" required>
+            </div>
+          </div>
 					<div class="text">
-	                   <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+	                   <textarea name="message" id="inputMessage" class="form-control" placeholder="Message:"required>Message:</textarea>
 	                   <div class="form-submit">
-			           <input name="submit" type="submit" id="submit" value="Submit"><br>
+			           <button class="btn btn-lg " style="color:white; background:black" type="submit" name="submit">Submit</button><br>
 			           </div>
 	                </div>
-	                <div class="clear"></div>
-                   </form>
-			     </div>
+              <div class="clear"></div>
+             </form>
+	         </div>
 		    </div>
 	     </div>
 	   </div>
