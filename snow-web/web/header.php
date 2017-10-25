@@ -39,7 +39,7 @@
             new UISearch( document.getElementById( 'sb-search' ) );
           </script>
           <!----//search-scripts---->
-          <ul class="icon1 sub-icon1 profile_img">
+          <!-- <ul class="icon1 sub-icon1 profile_img">
          <li><a class="active-icon c1" href="#"> </a>
           <ul class="sub-icon1 list">
             <div class="product_control_buttons">
@@ -58,7 +58,7 @@
             <div class="clear"></div>
           </ul>
          </li>
-         </ul>
+         </ul> -->
              <div class="clear"></div>
        </div>
       </div>
