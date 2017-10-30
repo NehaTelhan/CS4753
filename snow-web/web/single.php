@@ -203,7 +203,7 @@ body {
 							<form action="https://test.bitpay.com/checkout" method="post" >
 							  <input type="hidden" name="action" value="checkout" />
 							  <input type="hidden" name="posData" value="" />
-							  <input type="hidden" name="data" value="GUL8+szLiINkfuhKbNtbmlRXwI7iILy7qVFR37/vImYxxrg/IB8JKJRZHwM3QA6ZzUEdk5+m4bRs4hyp7wMnKNJ08u3MTmB9CA/IZirrAOS9+60YleJL+HC3seFMSQJY9GZl5QQPcAiqKvqwy29BXw==" />
+							  <input type="hidden" name="data" value="GUL8+szLiINkfuhKbNtbmlRXwI7iILy7qVFR37/vImYxxrg/IB8JKJRZHwM3QA6ZcLJuoS5EBglJY+dAU7pnDEpvs3RLATO/VrXFBogtESYHAk/RIRB2gqwudGZ+g3vuqDo9ACH6z9SxHQpsi8KP4k8npTvhuaF/m2IagVVnGl12ArBPH0rUCzTLk8EDEjr7ohYcQWS0850+KeBZTMqWig==" />
 							  <input type="image" src="https://test.bitpay.com/img/button-medium.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
 							</form>
 				   </div>
