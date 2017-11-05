@@ -9,15 +9,22 @@
          <div class="menu">
             <!-- <a class="toggleMenu" href="#"><img src="images/homepage/tea1.jpg" alt="" /></a> -->
               <ul class="nav" id="nav">
-
                 <li><a style="font-size: 55%" href="shop.php">Shop</a></li>
                 <li><a style="font-size: 55%" href="about.php">About</a></li>
                 <li><a style="font-size: 55%" href="experiance.php">Collection</a></li>
                 <li><a style="font-size: 55%" href="contact.php">Contact</a></li>
                 <li><a style="font-size: 55%" href="login.php">Login</a></li>
                 <li><a style="font-size: 55%" href="register.php">Sign Up</a></li>
-                <li><a style="font-size: 55%" href="logout.php">Logout</a></li>
 
+                <!-- Below to items need to be visible only when user is logged in -->
+                <li><a style="font-size: 55%" href="logout.php">Logout</a></li>
+                <li><a style="font-size: 55%" href="member.php">Members</a></li>
+
+                <p><?php 
+                session_start();
+                echo "Hello, " . $_SESSION["Email"]  
+                ?> </p>
+                <!-- Above items must be conditionally visible -->
 
               <div class="clear"></div>
             </ul>
