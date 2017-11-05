@@ -9,12 +9,16 @@
          <div class="menu">
             <!-- <a class="toggleMenu" href="#"><img src="images/homepage/tea1.jpg" alt="" /></a> -->
               <ul class="nav" id="nav">
+
                 <li><a style="font-size: 55%" href="shop.php">Shop</a></li>
                 <li><a style="font-size: 55%" href="about.php">About</a></li>
                 <li><a style="font-size: 55%" href="experiance.php">Collection</a></li>
                 <li><a style="font-size: 55%" href="contact.php">Contact</a></li>
                 <li><a style="font-size: 55%" href="login.php">Login</a></li>
-              <li><a style="font-size: 55%" href="register.php">Sign Up</a></li>
+                <li><a style="font-size: 55%" href="register.php">Sign Up</a></li>
+                <li><a style="font-size: 55%" href="logout.php">Logout</a></li>
+
+
               <div class="clear"></div>
             </ul>
             <script type="text/javascript" src="js/responsive-nav.js"></script>
