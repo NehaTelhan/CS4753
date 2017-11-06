@@ -109,13 +109,13 @@ if (isset($_POST['name'])){
     $city = test_input($_POST['city']);
     $state = test_input($_POST['state']);
     $zipcode = test_input($_POST['zipcode']);
-    $hashed_password = password_hash('$password', PASSWORD_DEFAULT).
+    $password = test_input($_POST['password']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $check_email = mysqli_num_rows(mysqli_query($con, "SELECT email FROM Users where email = '$email' "));
     if ($check_email > 0) {
         $fmsg = "User Account already exists";
     } else {
-      session_start();
-      $_SESSION["Email"] = $email;
+
       if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !test_address($address) && test_num($name) && test_num($city) && test_num($state) && test_zip($zipcode)){
         $sql="INSERT INTO Users (name, email, address, city, state, zipcode, password) VALUES ('$name', '$email', '$address', '$city', '$state', '$zipcode', '$hashed_password')";
         if (!mysqli_query($con,$sql)){
@@ -126,6 +126,9 @@ if (isset($_POST['name'])){
             // echo "Welcome $name. You are registered as $email.";
             $smsg = "Welcome $name. You are registered as $email. Click <a href='index.php'>here</a> to return to the home page.";
             send_email($email, $name);
+            session_start();
+            $_SESSION["Email"] = $email;
+            $_SESSION["Password"] = $hashed_password;
         }
       } else {
         // $a .= "World!";
@@ -305,7 +308,7 @@ function send_email($email, $name) {
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
           </div>
 
-          <button class="btn btn-lg " style="color:white; background:black" type="submit">Register</button>
+          <button class="btn btn-lg" style="color:white; background:black" type="submit">Register</button>
           <!-- <a class="btn btn-lg btn-primary btn-block" href="login.php">Login</a> -->
       </form>
       <br>

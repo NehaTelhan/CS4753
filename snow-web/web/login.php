@@ -24,6 +24,10 @@ h1,h2,h3,h4,ul {
 body {
   font-family: 'Raleway';
 }
+
+<?php include loginScript.php; ?>
+
+
 </style>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -67,6 +71,9 @@ body {
 		<div class="container">
 			<div class="col-md-6">
 				 <div class="login-page">
+
+             <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+             <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
 					<h4 class="title">New Customers</h4>
 					<p>Want to introduce new invigorating flavors from around the world to your tastebuds? Join our community now.</p>
 
@@ -82,7 +89,7 @@ body {
 				 <div class="login-title">
 	           		<h4 class="title">Registered Customers</h4>
 					<div id="loginbox" class="loginbox">
-						<form action="" method="post" name="login" id="login-form">
+						<form action = "loginScript.php" method="POST" name="login" id="login-form">
 						  <fieldset class="input">
 						    <p id="login-form-username">
 						      <label for="modlgn_username">Email</label>
@@ -97,7 +104,7 @@ body {
 							      <label for="modlgn_remember"><a href="#">Forget Your Password ? </a></label>
 							   </p>
 							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear">
-							    	
+
 							    </div>
 							 </div>
 						  </fieldset>
