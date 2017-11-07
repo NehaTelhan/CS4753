@@ -126,7 +126,9 @@ if (isset($_POST['name'])){
             // echo "Welcome $name. You are registered as $email.";
             $smsg = "Welcome $name. You are registered as $email. Click <a href='index.php'>here</a> to return to the home page.";
             send_email($email, $name);
-            session_start();
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
             $_SESSION["Email"] = $email;
             $_SESSION["Password"] = $hashed_password;
         }
