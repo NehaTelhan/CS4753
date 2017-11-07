@@ -36,9 +36,12 @@ if ($check_email > 0) {
     $_SESSION["Password"] = $hashed_password;
     // $smsg =  "Password valid. Click <a href='index.php'>here</a> to go to member page.";
 
+  } else {
+    echo "Password does not match username";
+    header ('Refresh: 2; URL = login.php');
   }
 } else {
-  echo "Login failed";
+  echo "User not found, returning to login";
   header('Refresh: 2; URL = login.php');
 }
 ?>
