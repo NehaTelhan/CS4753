@@ -1,3 +1,59 @@
+<?php
+
+require 'vendor/autoload.php';
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+function test_email($data) {
+  if (strpos($data, ".") !== false) {
+    return True;
+  } else {
+    return False;
+  }
+}
+
+include_once('connect.php');
+
+$con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
+// Check connection
+if (mysqli_connect_errno())
+{
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+// Form the SQL query (an INSERT query)
+if(isset($_POST['name'])){
+  $email = test_input($_POST['email']);
+  $_SESSION["Email"] = $email;
+  if (test_email($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $sql="INSERT INTO contact_requests (name, email, subject, message) VALUES ('$name', '$email', '$subject', '$message')";
+    if (!mysqli_query($con,$sql)){
+        die('Error: ' . mysqli_error($con));
+        $fmsg ="Contact request failed";
+
+    } else {
+        // echo "Welcome $name. You are registered as $email.";
+        $smsg = "Thanks for the contacting us, $name. One of our representatives will get back to you at: $email. Click <a href='index.php'>here</a> to return to the home page.";
+    }
+  } else {
+    $fmsg = "Contact request failed:";
+    if(!test_email($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $fmsg .=" Improperly Formatted Email ";
+
+    }
+
+  }
+  mysqli_close($con);
+}
+
+
+ ?>
+
+
 
 <div class="footer">
 <div class="container">
@@ -25,7 +81,9 @@
         <h4 style="font-size: 75%" >Newsletter</h4>
         <div class="footer_search">
              <form>
-            <input style="font-size: 60%"  type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+               <div class="form-group">
+                 <input style="font-size: 60%" name="email" id="inputEmail" type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+               </div>
             <input style="font-size: 70%" type="submit" value="Go">
              </form>
             </div>
