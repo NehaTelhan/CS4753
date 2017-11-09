@@ -36,17 +36,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $email = $_POST['email'];
         $_SESSION["Email"] = $email;
         if (test_email2($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $sql="UPDATE USERS SET subscribed='1' WHERE email='$email'";
-          $name="SELECT name FROM `Users` WHERE email='$email'";
-          if (!mysqli_query($con,$sql)){
-              die('Error: ' . mysqli_error($con));
-              $fmsg ="Contact request failed";
+          $check="SELECT subscribed FROM `Users` WHERE email='$email'";
+          $check_resp = $con->query($check);
+          /* seek to row no. 400 */
+          $check_resp->data_seek(0);
+          /* fetch row */
+          $row = $check_resp->fetch_row();
+            if($row[0]!='1'){
+              $sql="UPDATE USERS SET subscribed='1' WHERE email='$email'";
+              $name_quer="SELECT name FROM `Users` WHERE email='$email'";
+              $name_maybe = $con->query($name_quer);
+              $name_maybe->data_seek(0);
+              /* fetch row */
+              $name = $name_maybe->fetch_row();
+              if (!mysqli_query($con,$sql)){
+                  die('Error: ' . mysqli_error($con));
+                  $fmsg ="Contact request failed";
 
-          } else {
-              // echo "Welcome $name. You are registered as $email.";
-              $smsg = "$email subscribed to mailing list";
-              send_email2($email, $name);
-          }
+              } else {
+                  // echo "Welcome $name. You are registered as $email.";
+                  $smsg = "$email subscribed to mailing list";
+                  send_email2($email, $name[0]);
+              }
+            }
+          // echo "check is $check";
         } else {
           $fmsg = "Subscription request failed:";
           if(!test_email2($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -129,7 +142,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="footer_search">
              <form>
                <div class="form-group">
-                 <input style="font-size: 60%" name="email" id="inputEmail" type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+                 <!-- <input style="font-size: 60%" type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> -->
+                 <input style="font-size: 60%" name="email" id="inputEmail" type="email" class="form-control" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}" autofocus>
                <button name="btnSubscribe" class="btn btn-small" formmethod="post" style="color:white; background:black" type="submit">Subscribe</button>
              </div>
              </form>
