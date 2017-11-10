@@ -49,9 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               $sql="UPDATE USERS SET subscribed='1' WHERE email='$email'";
               $name_quer="SELECT name FROM `Users` WHERE email='$email'";
               $name_maybe = $con->query($name_quer);
-              $name_maybe->data_seek(0);
-              /* fetch row */
-              $name = $name_maybe->fetch_row();
+              if(mysqli_num_rows($name_maybe)<=0){
+                $name = "Valued Customer";
+              } else {
+                $name_maybe->data_seek(0);
+                /* fetch row */
+                $name = $name_maybe->fetch_row();
+                $name = $name[0];
+              }
               if (!mysqli_query($con,$sql)){
                   die('Error: ' . mysqli_error($con));
                   $fmsg ="Contact request failed";
@@ -59,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               } else {
                   // echo "Welcome $name. You are registered as $email.";
                   $smsg = "$email subscribed to mailing list";
-                  send_email2($email, $name[0]);
+                  send_email2($email, $name);
               }
             }
           // echo "check is $check";
