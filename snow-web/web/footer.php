@@ -34,6 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['btnSubscribe'])) {
         // btnSubscribe
         $email = $_POST['email'];
+        if (!test_email2($email)){
+          echo "Improperly formatted email";
+        }
         $_SESSION["Email"] = $email;
         if (test_email2($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
           $check="SELECT subscribed FROM `Users` WHERE email='$email'";
@@ -143,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
              <form>
                <div class="form-group">
                  <!-- <input style="font-size: 60%" type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> -->
-                 <input style="font-size: 60%" name="email" id="inputEmail" type="email" class="form-control" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}" autofocus>
+                 <input style="font-size: 60%" name="email" id="inputEmail" type="email" class="form-control" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}" required autofocus>
                <button name="btnSubscribe" class="btn btn-small" formmethod="post" style="color:white; background:black" type="submit">Subscribe</button>
              </div>
              </form>
