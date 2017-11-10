@@ -200,12 +200,22 @@ body {
 							<!-- <button type="submit" name="Submit" class="exclusive">
 							   <span>Add to cart</span>
 							</button> -->
-							<form action="https://test.bitpay.com/checkout" method="post" >
+
+							<?php
+
+              if (isset($_SESSION['Email'])) {
+              //<!-- Below to items need to be visible only when user is logged in -->
+                echo '<form action="https://test.bitpay.com/checkout" method="post" >
 							  <input type="hidden" name="action" value="checkout" />
 							  <input type="hidden" name="posData" value="" />
 							  <input type="hidden" name="data" value="GUL8+szLiINkfuhKbNtbmlRXwI7iILy7qVFR37/vImYxxrg/IB8JKJRZHwM3QA6ZcLJuoS5EBglJY+dAU7pnDEpvs3RLATO/VrXFBogtESYHAk/RIRB2gqwudGZ+g3vuqDo9ACH6z9SxHQpsi8KP4k8npTvhuaF/m2IagVVnGl12ArBPH0rUCzTLk8EDEjr7ohYcQWS0850+KeBZTMqWig==" />
 							  <input type="image" src="https://test.bitpay.com/img/button-medium.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
-							</form>
+							</form>';
+              } else {
+              	echo '<button type="button" class="btn1 btn1-default1 btn1-pinterest"> <a style="font-size: 100%" href="login.php">Log in to purchase!</a></button>';
+              }
+              ?>
+							
 				   </div>
 			   </div>
 			</div>
