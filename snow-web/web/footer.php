@@ -158,11 +158,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
              </form>
             </div>
         <ul class="social">
-          <li class="facebook"><a href="#"><span> </span></a></li>
-          <li class="twitter"><a href="#"><span> </span></a></li>
-          <li class="instagram"><a href="#"><span> </span></a></li>
-          <li class="pinterest"><a href="#"><span> </span></a></li>
-          <li class="youtube"><a href="#"><span> </span></a></li>
+          <li class="facebook"><a href="https://www.facebook.com/"><span> </span></a></li>
+          <li class="twitter"><a href="https://www.twitter.com/"><span> </span></a></li>
+          <li class="instagram"><a href="https://www.instagram.com/"><span> </span></a></li>
+          <li class="pinterest"><a href="https://www.pinterest.com/"><span> </span></a></li>
+          <li class="youtube"><a href="https://www.youtube.com/"><span> </span></a></li>
           </ul>
         </ul>
     </div>
