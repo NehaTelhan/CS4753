@@ -58,7 +58,7 @@ if(isset($_POST['email'])){
     $hash = $result->fetch_assoc()["password"];
     if(password_verify($password,$hash)){
       $smsg =  "Login successful, redirecting to member page";
-      header('Refresh: 2; URL = member.php');
+      header('Location: index.php');
       if (session_status() == PHP_SESSION_NONE) {
           session_start();
       }
