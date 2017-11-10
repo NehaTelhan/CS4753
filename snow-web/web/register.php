@@ -131,6 +131,7 @@ if (isset($_POST['name'])){
             }
             $_SESSION["Email"] = $email;
             $_SESSION["Password"] = $hashed_password;
+            $_SESSION["loggedin"] = true;
         }
       } else {
         // $a .= "World!";

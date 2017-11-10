@@ -32,8 +32,9 @@
               <ul class="nav">
               <?php
 
-              if (isset($_SESSION['Email'])) {
-              //<!-- Below to items need to be visible only when user is logged in -->
+              if (isset($_SESSION["loggedin"]) && $_SESSION['loggedin'] == true) {
+
+              //<!-- Below two items need to be visible only when user is logged in -->
                 echo '<li><a style="font-size: 55%" href="member.php">Members</a></li>
                   <li><a style="font-size: 55%" align="right" href="logout.php">Logout</a></li>';
               } else {

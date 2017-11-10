@@ -25,10 +25,60 @@ body {
   font-family: 'Raleway';
 }
 
-<?php include loginScript.php; ?>
 
 
 </style>
+
+<?php
+require 'vendor/autoload.php';
+
+include_once('connect.php');
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+$con = new mysqli($SERVER, $USERNAME, $PASSWORD, $DATABASE);
+// Check connection
+if (mysqli_connect_errno())
+{
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+if(isset($_POST['email'])){
+  $email = test_input($_POST['email']);
+  $password = test_input($_POST['password']);
+  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+  $check_email = mysqli_num_rows(mysqli_query($con, "SELECT email FROM Users where email = '$email' "));
+  if ($check_email > 0) {
+    $query = "SELECT password FROM users WHERE email = '$email'";
+    $result = mysqli_query($con,$query);
+    $hash = $result->fetch_assoc()["password"];
+    if(password_verify($password,$hash)){
+      $smsg =  "Login successful, redirecting to member page";
+      header('Refresh: 2; URL = member.php');
+      if (session_status() == PHP_SESSION_NONE) {
+          session_start();
+      }
+      $_SESSION["Email"] = $email;
+      $_SESSION["Password"] = $hashed_password;
+      $_SESSION["loggedin"] = true;
+      // $smsg =  "Password valid. Click <a href='index.php'>here</a> to go to member page.";
+
+    } else {
+      $fmsg =  "Password does not match username";
+      // header ('Refresh: 2; URL = login.php');
+    }
+  } else {
+    $fmsg =  "User not found";
+    // header('Refresh: 2; URL = login.php');
+  }
+}
+mysqli_close($con);
+?>
+
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="js/jquery.min.js"></script>
@@ -69,12 +119,13 @@ body {
      <div class="main">
       <div class="shop_top">
 		<div class="container">
+      <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+      <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
+
 			<div class="col-md-6">
 				 <div class="login-page">
 
-             <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
-             <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
-					<h4 class="title">New Customers</h4>
+             <h4 class="title">New Customers</h4>
 					<p>Want to introduce new invigorating flavors from around the world to your tastebuds? Join our community now.</p>
 
 					<!-- <button href="register.php" class="btn btn-lg " style="color:white; background:black" type="submit">Create an Account</button> -->
@@ -89,7 +140,7 @@ body {
 				 <div class="login-title">
 	           		<h4 class="title">Registered Customers</h4>
 					<div id="loginbox" class="loginbox">
-						<form action = "loginScript.php" method="POST" name="login" id="login-form">
+						<form method="POST" name="login" id="login-form">
 						  <fieldset class="input">
 						    <p id="login-form-username">
 						      <label for="modlgn_username">Email</label>
