@@ -106,9 +106,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
           //Content
+          $message = file_get_contents('viewCampaign.htm');
           $mail->isHTML(true);                                  // Set email format to HTML
           $mail->Subject = 'Subscription Confirmed';
-          $mail->Body    = 'Thank you so much for subscribing! Look forward to our tea themed emails!';
+          $mail->Body    = $message;
           $mail->AltBody = 'Thank you so much for subscribing! Look forward to our tea themed emails!';
 
           $mail->send();
