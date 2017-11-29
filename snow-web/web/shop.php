@@ -75,6 +75,8 @@ body {
 						<span class="sale-label">Sale!</span>
 					</span>
 					<div class="shop_desc">
+            <img src="images/experiences/fallteas.jpg" class="img-responsive" alt=""/ style="height: 50%; width: 50%;">
+						</a><a href="single.html"></a><a href="#"></a>
 						<h3><a href="#">Fall Teas</a></h3>
 						<p>Autumn is here! Enjoy it with a nice cup of tea! </p>
 						<span class="reducedfrom">$35.00</span>
@@ -95,7 +97,7 @@ body {
 						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Green Teas</span></h3>
 
 						<p>Full-bodied green tea flavor! </p>
-						<span class="reducedfrom">$24.00</span>
+						<!-- <span class="reducedfrom">$24.00</span> -->
 						<span class="actual">$8.25</span><br>
 						<ul class="buttons">
 							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
@@ -116,7 +118,7 @@ body {
 						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Chai Teas</span></h3>
 
 						<p>Sweet and spicy infusion! </p>
-						<span class="reducedfrom">$45.00</span>
+						<!-- <span class="reducedfrom">$45.00</span> -->
 						<span class="actual">$21.75</span><br>
 						<ul class="buttons">
 							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
@@ -134,7 +136,7 @@ body {
 						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Classic Teas</span></h3>
 
 						<p>A jubilant holiday delight.! </p>
-						<span class="reducedfrom">$21.00</span>
+						<!-- <span class="reducedfrom">$21.00</span> -->
 						<span class="actual">$6.50</span><br>
 						<ul class="buttons">
 							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
@@ -154,7 +156,7 @@ body {
 						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Coni Teas</span></h3>
 
 						<p>Tis the season for festive flavors! </p>
-						<span class="reducedfrom">$35.00</span>
+						<!-- <span class="reducedfrom">$35.00</span> -->
 						<span class="actual">$10.75</span><br>
 						<ul class="buttons">
 							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
@@ -175,7 +177,7 @@ body {
 						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Iced Teas</span></h3>
 
 						<p>A new take on a summer classic! </p>
-						<span class="reducedfrom">$26.00</span>
+						<!-- <span class="reducedfrom">$26.00</span> -->
 						<span class="actual">$17.00</span><br>
 						<ul class="buttons">
 							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
@@ -193,7 +195,7 @@ body {
 						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Kosher Teas</span></h3>
 
 						<p>Smooth orchid aroma throughout with a clean, refreshing finish! </p>
-						<span class="reducedfrom">$45.00</span>
+						<!-- <span class="reducedfrom">$45.00</span> -->
 						<span class="actual">$22.00</span><br>
 						<ul class="buttons">
 							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
@@ -214,7 +216,7 @@ body {
 						<h3><a href="#">Coming Soon! </a><span style="font-size: 15px" class="reducedfrom">Organic Teas</span></h3>
 
 						<p>Flowering tea are beautiful hand-tied tea balls that unfurl as the steep! </p>
-						<span class="reducedfrom">$35.00</span>
+						<!-- <span class="reducedfrom">$35.00</span> -->
 						<span class="actual">$10.75</span><br>
 						<ul class="buttons">
 							<!-- <li class="cart"><a href="#">Add To Cart</a></li> -->
