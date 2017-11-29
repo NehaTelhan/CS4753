@@ -75,7 +75,7 @@ body {
 						<span class="sale-label">Sale!</span>
 					</span>
 					<div class="shop_desc">
-            <img src="images/experiences/fallteas.jpg" class="img-responsive" alt=""/ style="height: 50%; width: 50%;">
+            <img src="images/jasmine_pearls.jpg" class="img-responsive" alt=""/ style="height: 50%; width: 50%;">
 						</a><a href="single.html"></a><a href="#"></a>
 						<h3><a href="#">Fall Teas</a></h3>
 						<p>Autumn is here! Enjoy it with a nice cup of tea! </p>
