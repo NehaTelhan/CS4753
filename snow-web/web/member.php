@@ -5,6 +5,14 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
+
+<?php
+if(!isset($_SESSSION['Email'])) {
+  header('Location: index.php');
+}
+
+ ?>
+
 <html>
 <head>
 <title>Chai Wali - Members</title>
@@ -80,12 +88,13 @@ body {
       <div class="shop_top">
 		<div class="container">
 			<div class="desc">
-	   	<h4>We Value You!</h4>
+      <h4> Member Home </h4>
+	   	<h2>We Value You!</h2>
 	   	<p>To show our apreciation for your loyalty to <i>Chaiwali</i>, we want to invite you to try our perfectly crafted recipes of baked good, using our very own teas! We value your trust in our company, and we will do our best to meet your service expectations.</p>
 	   	<p>It has been a pleasure serving you. ChaiWali takes pride in giving priority to their customers and looking after their needs. </p> <p>Quality and customer service are what distinguish us from others. We always strive to exceed our customers’ expectations and meet their requirements.</p> <p>If there is anything else we can do for you, please do inform us. We also appreciate your feedback; it’s what keeps us improving.</p> <p>Thank you again for choosing us. Looking forward to having you as one of our valued customers for many years to come.</p>
 	</div>
 			<div class="row ex_box">
-				<h3 class="m_2"> Try our Recipes!</h3>
+				<h2 class="m_2"> Try our Recipes!</h2>
 				</div>
 				<div class="col-md-4 team1">
 				<div class="img_section magnifier2">
