@@ -7,8 +7,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 
 <?php
-if(!isset($_SESSSION['Email'])) {
-  header('Location: index.php');
+include "header.php";
+if (isset($_SESSION["loggedin"]) && $_SESSION['loggedin'] == true) {
+
+} else {
+
+    header('Location: index.php');
 }
 
  ?>
@@ -83,7 +87,7 @@ body {
 	</script>
 </head>
 <body>
-	<?php include "header.php"; ?>
+
      <div class="main">
       <div class="shop_top">
 		<div class="container">
