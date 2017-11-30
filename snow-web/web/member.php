@@ -116,6 +116,7 @@ body {
 					</div>
 				</a></div>
 
+
 				<!-- div class="col-md-4 team1">
 				<div class="img_section magnifier2">
 				  <a class="fancybox" href="images/experiences/fav.jpg" data-fancybox-group="gallery" title="Favorites"><img src="images/experiences/fav.jpg" class="img-responsive" alt=""><span> </span>
@@ -125,6 +126,13 @@ body {
 				</a></div>
 				</div> -->
 		    </div>
+        <div class="col-md-4 team1">
+				<div class="img_section magnifier2">
+				  <a class="fancybox" data-fancybox-group="gallery" title="Coming Soon"><img src="images/coming_soon.jpg" class="img-responsive" alt=""><span> </span>
+					<div class="img_section_txt">
+						More coming soon!
+					</div>
+				</a></div>
 		 </div>
 	   </div>
 	  </div>
