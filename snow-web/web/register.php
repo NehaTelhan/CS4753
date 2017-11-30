@@ -132,6 +132,7 @@ if (isset($_POST['name'])){
             $_SESSION["Email"] = $email;
             $_SESSION["Password"] = $hashed_password;
             $_SESSION["loggedin"] = true;
+            header('Location: member.php');
         }
       } else {
         // $a .= "World!";

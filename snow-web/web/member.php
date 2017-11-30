@@ -93,7 +93,7 @@ body {
 		<div class="container">
 			<div class="desc">
       <h4> Member Home </h4>
-	   	<h2>We Value You!</h2>
+	   	<h2>We Value You! Now check out our teas in the <a href = 'shop.php'> shop </a></h2>
 	   	<p>To show our apreciation for your loyalty to <i>Chaiwali</i>, we want to invite you to try our perfectly crafted recipes of baked good, using our very own teas! We value your trust in our company, and we will do our best to meet your service expectations.</p>
 	   	<p>It has been a pleasure serving you. ChaiWali takes pride in giving priority to their customers and looking after their needs. </p> <p>Quality and customer service are what distinguish us from others. We always strive to exceed our customers’ expectations and meet their requirements.</p> <p>If there is anything else we can do for you, please do inform us. We also appreciate your feedback; it’s what keeps us improving.</p> <p>Thank you again for choosing us. Looking forward to having you as one of our valued customers for many years to come.</p>
 	</div>
